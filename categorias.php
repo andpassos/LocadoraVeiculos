@@ -12,15 +12,6 @@ require_once 'cabecalho.php';
 <a href="categorias-criar.php" class="btn btn-success">Adicionar Categoria</a>
 <br>
 
-<select>
-    <?php foreach($lista as $linha){ ?>
-        <option value="<?php echo $linha['id'];?>">
-            <?php echo $linha['descricao'];?>
-            </option>
-    <?php } ?>
-</select>
-
-
 <table class="table">
     <thead>
         <th>Id</th>

@@ -24,8 +24,6 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="categorias.php">Categorias</a></li>
-                <li><a href="clientes.php">Clientes</a></li>
                 <li><a href="produtos.php">Produtos</a></li>
                 <li><a href="clientes.php">Clientes</a></li>
                 <li><a href="funcionarios.php">Funcionários</a></li>

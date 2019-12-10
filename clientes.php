@@ -9,7 +9,7 @@ require_once 'cabecalho.php';
 ?>
 
 <h2>Cliente</h2>
-<a href="clientes-criar.php" class="btn btn-success">Adicionar Usuário</a>
+<a href="clientes-criar.php" class="btn btn-success">Adicionar Cliente</a>
 <br>
 <table class="table">
     <thead>
@@ -22,7 +22,7 @@ require_once 'cabecalho.php';
         <?php foreach($lista as $linha){ ?>
             <tr>
                 <td><?php echo $linha['id'];?></td>
-                <td><?php echo $linha['funcionario'];?></td>
+                <td><?php echo $linha['nome'];?></td>
                 <td><?php echo $linha['cpf'];?></td>
                 <td>
                     <a href="clientes-editar.php?CODIGO=<?php echo $linha['id'];?>" class="btn btn-info">  Alterar </a>

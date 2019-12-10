@@ -5,8 +5,10 @@ class Cliente{
 /*atributos*/
 public $id;
 public $nome;
-public $endereco;
+public $cpf;
 public $telefone;
+public $endereco;
+
 
 
 /*métodos*/
@@ -18,9 +20,9 @@ public $telefone;
         return $lista;
     }
 
-    public function inserir($nome, $cpf, $endereco, $telefone){
+    public function inserir($nome, $cpf,  $telefone, $endereco){
         $conexao = new PDO("mysql:host=127.0.0.1;dbname=banco","root","");
-        $query = "INSERT INTO tb_clientes(nome, cpf, endereco, telefone ) VALUES ( '".$nome."', '".$cpf."', '".$endereco."', '".$telefone."')";
+        $query = "INSERT INTO tb_clientes(nome, cpf, telefone, endereco ) VALUES ( '".$nome."', '".$cpf."', '".$telefone."', '".$endereco."')";
         $conexao ->exec($query);
     }
 
@@ -30,17 +32,17 @@ public $telefone;
         $conexao->exec ($query);
     }
 
-    public function alterar($id, $funcionario, $cargo){
+    public function alterar($id, $nome, $cpf, $telefone, $endereco ){
         $conexao = new PDO("mysql:host=127.0.0.1;dbname=banco","root","");
-        $query = "UPDATE tb_clientes SET funcionario = '".$funcionario."' , cargo = '".$cargo."' WHERE id = " . $id;
+        $query = "UPDATE tb_clientes SET nome = '".$nome."' , cpf = '".$cpf."', telefone = '".$telefone."', endereco = '".$endereco."' WHERE id = " . $id;
 
         $conexao->exec($query);
     }
 
 
-    public function lista1Funcionario($id){
+    public function lista1Cliente($id){
         $conexao = new PDO("mysql:host=127.0.0.1;dbname=banco","root","");
-        $query = "SELECT id, funcionario, cargo FROM tb_funcionarios WHERE id = ". $id;
+        $query = "SELECT id, nome, cpf, telefone, endereco FROM tb_clientes WHERE id = ". $id;
         $resultado = $conexao->query($query);
         $lista = $resultado->fetchAll();
         
