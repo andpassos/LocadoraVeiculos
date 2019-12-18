@@ -28,4 +28,14 @@ public $senha;
     $query = "DELETE FROM tb_usuarios WHERE id = " . $id;
     $conexao->exec ($query);
 }
+
+    public function validarLogin($usuario, $senha){
+    $conexao = new PDO("mysql:host=127.0.0.1;dbname=banco","root","");
+    $query = "SELECT * FROM tb_usuarios WHERE usuario = '".$usuario."' AND senha = '".$senha."'";
+    $resultado = $conexao->query($query);
+    $lista = $resultado->fetchAll();
+    foreach($lista as $um){
+        return $um;
+        }
+    }
 }

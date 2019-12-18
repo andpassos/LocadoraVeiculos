@@ -20,18 +20,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="home.php">Locadora All Rent a Car</a>
+            <a class="navbar-brand" href="index.php">Locadora All Rent a Car</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <!-- <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="locacao.php">Locação</a></li>
+                <li><a href="produtos.php">Home</a></li>
                 <li><a href="clientes.php">Clientes</a></li>
                 <li><a href="funcionarios.php">Funcionários</a></li>
                 <li><a href="veiculos.php">Veículos</a></li>
                 <li><a href="usuarios.php">Usuários</a></li>
-                <li><a href="index.php">Sair</a></li>
             </ul>
-        </div><!--/.navbar-collapse -->
+        </div>/.navbar-collapse -->
     </div>
 </nav>
 
