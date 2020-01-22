@@ -16,7 +16,7 @@
 
 ?>
 
-    <h2> Alterar Locacao</h2>
+    <h2> Alterar Locação</h2>
 
     <form name="alterar-locacao" action="locacao-editar-post.php" method="post">
     
@@ -70,24 +70,26 @@
 
                
             <input type="submit" class="btn btn-success btn-block" value="Salvar">
+
+            <input type="button" class="btn btn btn-block" value="Calcular" onclick="Calcular();">
+            
         </div>
     </div>
 </form>
 
-    <form name="alterar-locacao" action="categorias-editar-post.php" method="post">
+<script>
+    function Calcular(){
 
-        Descrição:
-        <input name="id" type="hidden" value="<?php echo $id;?>">
-        <input name="descricao" value="<?php echo $linha['descricao'];?>">
-        <button type="submit">SALVAR</button>
-    </form>
+    var retirada = new Date(document.querySelector("#retirada").value);
+    var devolucao = new Date(document.querySelector("#devolucao").value);
+    var diferencaHoras = Math.abs(retirada.getTime() - devolucao.getTime());
+    var diferencaDias = Math.ceil(diferencaHoras / (1000 * 3600 * 24));
+    
+    var precoLocacao = document.querySelector('#preco').value;
+    document.querySelector('#total').value= precoLocacao*diferencaDias;
+ }
+</script>
 
 <?php require_once 'rodape.php' ?>
-
-
-
-
-
-?>
 
 

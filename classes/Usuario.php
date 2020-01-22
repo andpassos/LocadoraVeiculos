@@ -29,6 +29,12 @@ public $senha;
     $conexao->exec ($query);
 }
 
+    public function alterar($id, $usuario, $senha){
+    $conexao = new PDO("mysql:host=127.0.0.1;dbname=banco","root","");
+    $query = "UPDATE tb_usuarios SET usuario = '".$usuario."' , senha = '".$senha."' WHERE id = " . $id;
+
+    $conexao->exec($query);
+}
     public function validarLogin($usuario, $senha){
     $conexao = new PDO("mysql:host=127.0.0.1;dbname=banco","root","");
     $query = "SELECT * FROM tb_usuarios WHERE usuario = '".$usuario."' AND senha = '".$senha."'";
@@ -36,6 +42,17 @@ public $senha;
     $lista = $resultado->fetchAll();
     foreach($lista as $um){
         return $um;
+        }
+    }   
+
+    public function lista1Usuario($id){
+        $conexao = new PDO("mysql:host=127.0.0.1;dbname=banco","root","");
+        $query = "SELECT id, usuario, senha FROM tb_usuarios  WHERE id = ". $id;
+        $resultado = $conexao->query($query);
+        $lista = $resultado->fetchAll();
+        
+        foreach($lista as $linha){
+            return $linha;
         }
     }
 }

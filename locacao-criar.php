@@ -77,8 +77,6 @@ function Calcular(){
     var precoLocacao = document.querySelector('#preco').value;
     document.querySelector('#total').value= precoLocacao*diferencaDias;
 
-
-    
     }
 </script>
 

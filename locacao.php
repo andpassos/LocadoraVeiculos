@@ -7,8 +7,8 @@ $locacoes = new Locacao();
 $lista = $locacoes->listar()
 
  ?>
-<h2>Locação</h2>
-<a href="locacao-criar.php" class="btn btn-info">Criar Novo Produto</a>
+<h2>Registro de Locações</h2>
+<a href="locacao-criar.php" class="btn btn-info">Nova Locação</a>
 
 <table class="table">
     <thead>

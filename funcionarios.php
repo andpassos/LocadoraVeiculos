@@ -8,8 +8,8 @@ $lista = $funcinario->listar();
 require_once 'cabecalho.php';
 ?>
 
-<h2>Funcinários</h2>
-<a href="funcionarios-criar.php" class="btn btn-success">Adicionar Usuário</a>
+<h2>Fincionários</h2>
+<a href="funcionarios-criar.php" class="btn btn-success">Adicionar Funcinário</a>
 <br>
 <table class="table">
     <thead>

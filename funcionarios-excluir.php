@@ -1,6 +1,6 @@
 <?php require_once 'cabecalho.php'; ?>
 
-Aqui mora a exclusão
+
 <?php
 echo $_GET['CODIGO'];
 $id_excluir = $_GET['CODIGO'];
